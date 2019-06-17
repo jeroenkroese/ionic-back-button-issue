@@ -13,6 +13,19 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../tab1/tab1.module#Tab1PageModule'
+          },
+          {
+            path: 'page2',
+            children: [
+              {
+                path: '',
+                loadChildren: '../page2/page2.module#Page2PageModule'
+              },
+              {
+                path: 'page3',
+                loadChildren: '../page3/page3.module#Page3PageModule'
+              }
+            ]
           }
         ]
       },
